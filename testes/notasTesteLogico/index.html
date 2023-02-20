@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculo de notas</title>
+
+
+    <style>
+        body{
+            background: black;
+            color: white;
+            font: normal    18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+        <h1>Calculo de notas!</h1>
+            Adicione nome do aluno! <input type="text" name="nome" id="nome"> 
+
+    <br>
+    <br>
+            Adicione a 1° nota do aluno. <input type="number"  id="nota1">
+
+            <br>
+
+            Adicione a 2° nota do aluno. <input type="number"  id="nota2">
+
+            <br>
+
+            Adicione a 3° nota do aluno. <input type="number"  id="nota3">
+
+            <br>
+
+            Adicione a 4° nota do aluno. <input type="number"  id="nota4">
+            <br>
+
+            <input type="button" value="Confirmar" onclick="rodar()">
+
+            <div id='res'>
+            </div>
+
+
+            <script>
+                 
+                 function rodar() {
+                 
+                 var res = window.document.querySelector('div#res')
+
+                        var nomee = window.document.getElementById('nome')
+
+                        var nota1 = window.document.getElementById('nota1').value
+                        
+                        var nota2 = window.document.getElementById('nota2').value
+                       
+                        var nota3 = window.document.getElementById('nota3').value
+        
+                        var nota4 = window.document.getElementById('nota4').value
+            
+
+                var soma = parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4)
+                    soma = parseFloat(soma.toFixed(2))
+
+                    var situacao = parseInt(0)
+                
+
+                if (soma < 20 ) {
+                    res.innerHTML += `<p>O aluno ${nomee.value} não atingiu a média necessaria e está <strong>REPROVADO!</strong> Sua nota foi de ${soma}!</p> <br>`
+                    situacao = 0
+                } else if (soma <=  23.99 ) {
+                    res.innerHTML += `<p>O aluno ${nomee.value} não atingiu a média necessaria por pouco e está de <strong>RECUPERAÇÃO!</strong> Sua nota foi de ${soma}</p> <br>`
+                    situacao = 1
+                } else {
+                    res.innerHTML += `<p>O aluno ${nomee.value} atingiu a média necessaria e está <strong>APROVADO!</strong> Sua nota foi de ${soma}</p> <br>`
+                    situacao = 2
+                }
+
+                switch (situacao) {
+                    case 0:
+                    res.innerHTML += `Você poderá estudar mais não que vem, ${nomee.value}!`
+                        break;
+                        
+                    case 1:
+                    res.innerHTML += `Semana que vem é sua recuperação, hora de estudar, ${nomee.value}!`
+                        break;
+                
+                    case 2:
+                    res.innerHTML += `Você já pode aproveitar suas férias! Até ano que vem, ${nomee.value}!`
+                        break;
+
+                    default:
+                        break;
+                }
+
+
+
+                  }
+
+                  
+            </script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio tenis</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+        <h1> Loja de Tênis </h1>
+
+        Qual tamanho do 38 até 44? <input type="number" name="tamanho" id="tamanho">
+    <br>       
+        Qual marca você deseja? <input type="text" name="prod" id="prod">
+        <input type="button" value="procurar" onclick="procurar()">
+
+        <div id='res'>
+        </div>
+
+        
+
+
+
+
+        <script>
+
+            function procurar () {
+
+                var prod1 = window.document.getElementById('prod')
+                
+                var tam1 = window.document.getElementById('tamanho')
+                var tam = Number(tam1.value) 
+
+                var res = window.document.getElementById('res')
+
+                res.innerHTML = `<p>Você buscou por <strong>${prod1.value},</strong> no tamanho <strong>${tam}!</strong></p>`
+
+               if (prod1.value.toUpperCase() == `NIKE`) {
+                    
+                    switch (tam) {
+                            case 38 :
+                        res.innerHTML += `Temos a versão vermelha e preta dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+                    
+                            case 39 :
+                        res.innerHTML += `Temos a versão vermelha e roxa dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 40 :
+                        res.innerHTML += `Temos a versão verde e preta dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 41 :
+                        res.innerHTML += `Temos a versão verde e amarela dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 42 :
+                        res.innerHTML += `Temos a versão amarela e rosa dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 43 :
+                        res.innerHTML += `Temos a versão rosa e roxa dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 44 :
+                        res.innerHTML += `Temos a versão preto e branco dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                        default:
+                        res.innerHTML += `Coloque no campo acima um número conforme o indicado, visto que o número ${tam} não consta no sistema, agradecemos.`
+                            break;
+                    }
+
+
+               } else if (prod1.value.toUpperCase() == `PUMA`) {
+                
+                    switch (tam) {
+                            case 38 :
+                        res.innerHTML += `Temos a versão preta e preta dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+                    
+                            case 39 :
+                        res.innerHTML += `Temos a versão roxa e roxa dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 40 :
+                        res.innerHTML += `Temos a versão verde e verde dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 41 :
+                        res.innerHTML += `Temos a versão amarela e amarela dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 42 :
+                        res.innerHTML += `Temos a versão rosa e rosa dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 43 :
+                        res.innerHTML += `Temos a versão branco e branco dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 44 :
+                        res.innerHTML += `Temos a versão lilas e lilas dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                        default:
+                        res.innerHTML += `Coloque no campo acima um número conforme o indicado, visto que o número ${tam} não consta no sistema, agradecemos.`
+                            break;
+                    }
+
+               } else if (prod1.value.toUpperCase() == `ADIDAS`) {
+                
+                    switch (tam) {
+                            case 38 :
+                        res.innerHTML += `Temos a versão blue e red dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+                    
+                            case 39 :
+                        res.innerHTML += `Temos a versão black e green dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 40 :
+                        res.innerHTML += `Temos a versão green e white dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 41 :
+                        res.innerHTML += `Temos a versão white e black dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 42 :
+                        res.innerHTML += `Temos a versão yellow e green dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 43 :
+                        res.innerHTML += `Temos a versão green e red dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                            case 44 :
+                        res.innerHTML += `Temos a versão red e white dos tênis da ${prod1.value}, no tamanho ${tam}!`
+                            break;
+
+                        default:
+                        res.innerHTML += `Coloque no campo acima um número conforme o indicado, visto que o número ${tam} não consta no sistema, agradecemos.`
+                            break;
+                    }
+
+               } else {
+
+                res.innerHTML += `A marca solicitada não consta em nosso sistema. Atualmente trabalhamos com Nike, Adidas e Puma`
+
+               }
+               
+               
+            }
+
+            
+    
+    </script>
+
+
+
+
+
+</body>
+</html>

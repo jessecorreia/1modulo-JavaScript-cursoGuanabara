@@ -1,0 +1,16 @@
+@charset "UTF-8";   
+
+body{
+    background: black;
+    color: white;
+    font: normal    18pt Arial;
+    
+}
+
+input{
+    text-transform: uppercase;
+}
+
+div{
+    text-transform: uppercase;
+}
